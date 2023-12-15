@@ -46,7 +46,7 @@ const Login = () => {
   useEffect(() => {
 
     if (formSubmitted) {
-      navigate("/dashboard", {state:allMem});
+      navigate("/timesheet/dashboard", {state:allMem});
     }
     
   }, [allMem, formSubmitted]); 
