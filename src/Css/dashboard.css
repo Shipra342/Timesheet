@@ -1,0 +1,150 @@
+.header {
+  background-color: rgb(31, 114, 216);
+  height: 6%;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 550;
+  padding: 0 40px;
+}
+.header :hover {
+  cursor: pointer;
+}
+.upper-chart {
+  width: 94%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(241, 241, 241);
+  padding: 10px;
+  border-radius: 20px;
+
+}
+.upper-chart > div {
+  width: calc(50% -  20px);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.upper-chart > div > p {
+  font-size: 18px;
+  font-weight: 550;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+.bottomMid, .bottomLeft{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(241, 241, 241);
+  border-radius: 20px;
+}
+.missedDSR{
+  color: black;
+  display: flex;
+  /* padding: 0 10px; */
+  width: 35%;
+  height: 10%;
+  background-color: rgb(237, 237, 237);
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid lightgrey;
+  
+}
+
+.hours{
+  width: 25%;
+  background-color: rgb(237, 237, 237);
+  margin-left: 20px;
+  text-align: left;
+  padding-left: 20px;
+}
+.pieChartDiv{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  height: 93%;
+}
+.inPieChart{
+  width: calc(30% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  background-color: rgb(241, 241, 241);
+  border-radius: 20px;
+}
+
+.inPieChart > div > label{
+  font-size: 20px;
+  font-weight: 550;
+
+}
+.cal{
+  width: 100%;
+  height: 80%;
+  /* border: 1px solid; */
+}
+.userInfo{
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.pieC{
+  width: 85%;
+}
+.userField{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(95% - 20px);
+  height: 13%;
+  padding: 0 10px;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  background-color: #F8F8F8;
+}
+
+
+@media (min-width: 1600px){
+  .upper-chart{
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid; */
+  }
+  .upper-chart > div{
+    width: 40%;
+  }
+  .pieChartDiv{
+    width: 80%;
+    height: 100%;
+    justify-content: space-between;
+    /* border: 1px solid; */
+  }
+  .inPieChart{
+    width: 30%;
+    height: 93%;
+  }
+  .bottomMid, .bottomLeft{
+    width: 30%;
+    height: 93%;
+  }
+  .pieC{
+    width: 70%;
+  }
+}

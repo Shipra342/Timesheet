@@ -1,0 +1,11 @@
+.editModeOff
+{
+    background: transparent;
+     border: none;
+     text-align: left;
+}
+.edit-modeOn{
+    border: 1px solid lightgray;
+    background-color: transparent;
+    text-align: left;
+}
