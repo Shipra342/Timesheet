@@ -28,7 +28,15 @@ const Login = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/showAdmin/${user.email}`);
+      // const response = await axios.get(`http://localhost:8080/showAdmin/${user.email}`);
+      const data = {
+        aname: "Shipra",
+        empCode: "20192",
+        desig: "Software Engineer",
+        doj: "03-10-2022",
+        noProj: 1,
+      };
+      const response = {"data": data};
   
       setMem({
         email: user.email,
