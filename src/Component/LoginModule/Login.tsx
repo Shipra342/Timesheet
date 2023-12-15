@@ -30,11 +30,12 @@ const Login = () => {
     try {
       const response = await axios.get(`http://localhost:8080/showAdmin/${user.email}`);
   
-      setMem((prevAllMem) => ({
-        ...prevAllMem,
+      setMem({
         email: user.email,
         ...response.data,
-      }));
+    });
+
+    // console.log(allMem);
       setFormSubmitted(true);
   
     } catch (error) {
