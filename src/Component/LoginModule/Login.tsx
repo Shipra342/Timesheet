@@ -41,7 +41,7 @@ const Login = () => {
       setMem({
         email: user.email,
         ...response.data,
-    });
+      });
 
     // console.log(allMem);
       setFormSubmitted(true);
@@ -54,6 +54,7 @@ const Login = () => {
   useEffect(() => {
 
     if (formSubmitted) {
+      console.log(allMem);
       navigate("/timesheet/dashboard", {state:allMem});
     }
     
