@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 
 import PersonIcon from "@mui/icons-material/Person";
 import LockIcon from "@mui/icons-material/Lock";
@@ -28,22 +27,13 @@ const Login = () => {
 
   const fetchData = async () => {
     try {
-      // const response = await axios.get(`http://localhost:8080/showAdmin/${user.email}`);
-      const data = {
-        aname: "Shipra",
-        empCode: "20192",
-        desig: "Software Engineer",
-        doj: "03-10-2022",
-        noProj: 1,
-      };
-      const response = {"data": data};
+      const response = await axios.get(`http://localhost:8080/showAdmin/${user.email}`);
   
       setMem({
         email: user.email,
         ...response.data,
       });
 
-    // console.log(allMem);
       setFormSubmitted(true);
   
     } catch (error) {
