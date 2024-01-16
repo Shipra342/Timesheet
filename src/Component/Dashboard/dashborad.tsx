@@ -20,13 +20,16 @@ const Dashboard = () => {
   const handleChange1 = (event: any) => {
     setTime(event.target.value as string);
   };
-  const openUser = () => {
-    setuser(!openInfo);
+
+  const logoutchange = () => {
+    // setuser(!openInfo);
+    navigate("/timesheet")
   };
+
   const location = useLocation();
 
   const user = location.state;
-  console.log(user)
+  console.log(user);
 
   const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
   const months = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
@@ -135,8 +138,8 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   const openDsrForm = () => {
-    navigate('/addDSR');
-  }
+    navigate("/addDSR");
+  };
 
   return (
     <div
@@ -156,10 +159,17 @@ const Dashboard = () => {
           style={{ display: "flex", width: "40%", justifyContent: "flex-end" }}
         >
           <p style={{ paddingRight: "40px" }}>All Task</p>
-          <p style={{ paddingRight: "40px" }} onClick={openDsrForm}>Add DSR +</p>
+          <p style={{ paddingRight: "40px" }} onClick={openDsrForm}>
+            Add DSR +
+          </p>
         </div>
-        <div onClick={openUser}>
-          <AccountCircleIcon />
+        <div>
+          <label>
+            <AccountCircleIcon />
+          </label>
+          <Select value={"Logout"} onChange={logoutchange}>
+            <MenuItem value={"logout"}>Log Out</MenuItem>
+          </Select>
         </div>
       </div>
       <div
@@ -230,7 +240,6 @@ const Dashboard = () => {
           paddingBottom: "10px",
         }}
       >
-        
         <div className="pieChartDiv">
           <div className="bottomLeft">
             <div className="userInfo">
